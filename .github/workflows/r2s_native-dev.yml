@@ -48,7 +48,7 @@ jobs:
           cd openwrt
           ./scripts/feeds update -a && ./scripts/feeds install -a
           make defconfig
-          make download -j8
+          #make download -j8
           make -j$(($(nproc) + 1)) -s          
 
       - name: Assemble Artifact
